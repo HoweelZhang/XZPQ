@@ -25,8 +25,9 @@
     
     [self initWindowWithTabBarController];
 //    [self initIntroduceViewController];
-
-        [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
     return YES;
 }
 
