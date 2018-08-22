@@ -17,6 +17,7 @@
 		9E4B97842123C2DC0076DAD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B97832123C2DC0076DAD5 /* AppDelegate.m */; };
 		9E4B978F2123C2DD0076DAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4B978D2123C2DD0076DAD5 /* LaunchScreen.storyboard */; };
 		9E4B97922123C2DD0076DAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B97912123C2DD0076DAD5 /* main.m */; };
+		9E8BCE1C212D31B6001DDB56 /* marsonyDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BCE1B212D31B6001DDB56 /* marsonyDemoViewController.m */; };
 		9ED3C26A21251D790039C8C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3C26921251D790039C8C4 /* Images.xcassets */; };
 		9ED3C27B212565F50039C8C4 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3C272212565F40039C8C4 /* homeViewController.m */; };
 		9ED3C27C212565F50039C8C4 /* mineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3C275212565F40039C8C4 /* mineViewController.m */; };
@@ -50,6 +51,8 @@
 		9E4B978E2123C2DD0076DAD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E4B97902123C2DD0076DAD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E4B97912123C2DD0076DAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E8BCE1A212D31B6001DDB56 /* marsonyDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = marsonyDemoViewController.h; sourceTree = "<group>"; };
+		9E8BCE1B212D31B6001DDB56 /* marsonyDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = marsonyDemoViewController.m; sourceTree = "<group>"; };
 		9ED3C26921251D790039C8C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9ED3C272212565F40039C8C4 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		9ED3C273212565F40039C8C4 /* mineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mineViewController.h; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 		9E1792A8212BFAF700EC2C69 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9E8BCE0E212D0F06001DDB56 /* UITabbleView */,
 				9E1792AA212BFB1700EC2C69 /* UIView */,
 			);
 			path = UIKit;
@@ -195,9 +199,26 @@
 			path = XZPQ;
 			sourceTree = "<group>";
 		};
+		9E8BCE0E212D0F06001DDB56 /* UITabbleView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITabbleView;
+			sourceTree = "<group>";
+		};
+		9E8BCE16212D14A7001DDB56 /* marsonyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9E8BCE1A212D31B6001DDB56 /* marsonyDemoViewController.h */,
+				9E8BCE1B212D31B6001DDB56 /* marsonyDemoViewController.m */,
+			);
+			path = marsonyDemo;
+			sourceTree = "<group>";
+		};
 		9ED3C270212565F40039C8C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9E8BCE16212D14A7001DDB56 /* marsonyDemo */,
 				9E17928A212AA82000EC2C69 /* test */,
 				9ED3C271212565F40039C8C4 /* main */,
 				9ED3C276212565F40039C8C4 /* Base */,
@@ -387,6 +408,7 @@
 				9ED3C27D212565F50039C8C4 /* NavigationController.m in Sources */,
 				9E17929D212BAC9A00EC2C69 /* CollectionViewController.m in Sources */,
 				9ED3C27B212565F50039C8C4 /* homeViewController.m in Sources */,
+				9E8BCE1C212D31B6001DDB56 /* marsonyDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
