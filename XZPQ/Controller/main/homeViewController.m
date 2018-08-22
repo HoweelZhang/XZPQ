@@ -74,13 +74,14 @@ static NSString* const ktableCell = @"tableCell";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.title = @"UIKit";
-    self.tabBarItem.title = @"UIKit";
-    self.view.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1];
+//    self.title = @"UIKit";
+//    self.tabBarItem.title = @"UIKit";
+//    self.view.backgroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1];
 }
 
 - (void)setupNavigationItems {
     [super setupNavigationItems];
+    self.title = @"UIkit";
 }
 
 #pragma mark - UITableViewDataSorce
@@ -183,6 +184,7 @@ static NSString* const ktableCell = @"tableCell";
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     QMUILog(@"didSelect-选中",@"%@,%@",@(indexPath.row),cell.textLabel.text);
+    
     
     [self.navigationController pushViewController:[marsonyDemoViewController new] animated:YES];
 }
