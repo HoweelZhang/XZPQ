@@ -12,6 +12,7 @@
 #import "mineViewController.h"
 #import "TabBarViewController.h"
 #import <AFNetworking.h>
+#import "marsonyDemoViewController.h"
 
 @interface AppDelegate ()
 
@@ -62,8 +63,10 @@
     //1.创建Window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    TabBarViewController *tabbar = [[TabBarViewController alloc]init];
-    self.window.rootViewController = tabbar;
+//    TabBarViewController *tabbar = [[TabBarViewController alloc]init];
+//    self.window.rootViewController = tabbar;
+    
+        self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[NSClassFromString(@"JKTabBarViewControllerDEMO") new]];
     [self.window makeKeyAndVisible];
 }
 

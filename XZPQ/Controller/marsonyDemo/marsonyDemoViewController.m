@@ -7,6 +7,7 @@
 //
 
 #import "marsonyDemoViewController.h"
+#import <objc/runtime.h>
 
 @interface marsonyDemoViewController ()
 
@@ -17,7 +18,6 @@
 - (void)didInitialize {
     [super didInitialize];
     // init 时做的事情请写在这里
-    self.navigationController.navigationBar.topItem.title = @"marsonyDemo<##>";
 }
 
 - (void)initSubviews {
@@ -27,14 +27,28 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    QMUINavigationButton *navBtn = [[QMUINavigationButton alloc]initWithType:QMUINavigationButtonTypeBack title:@"返回"];
-//    self.navigationItem = navBtn;
+    QMUILogInfo(@"viewWillAppear",@"");
+}
+
+- (void)qmuiNav_viewWillAppear:(BOOL)animated {
+    QMUILogInfo(@"qmuiNav_viewWillAppear",@"");
+}
+
+
+- (void)willShowViewController:(nonnull UIViewController *)viewController animated:(BOOL)animated NS_REQUIRES_SUPER{
+    [super navigationController:self.navigationController willShowViewController:viewController animated:animated];
+    QMUILog(@"willShowViewController",@"");
+}
+
+- (void)didShowViewController:(nonnull UIViewController *)viewController animated:(BOOL)animated NS_REQUIRES_SUPER{
+    QMUILog(@"didShowViewController",@"");
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 对 self.view 的操作写在这里
-//    [self showEmptyViewWithImage:UIImageMake(@"phone") text:@"text" detailText:@"detailText" buttonTitle:@"button" buttonAction:@selector(tap)];
+    self.view.backgroundColor = UIColorWhite;
 }
+
 - (void)tap {
     QMUILog(@"",@"tap-=-=-=-=-=-=-=");
 }
@@ -43,11 +57,12 @@
 - (void)setupNavigationItems {
     [super setupNavigationItems];
 //    self.title = @"marsonyDemo<##>";
-//    QMUINavigationTitleView *titleV = [[QMUINavigationTitleView alloc]init];
-//    titleV.style = QMUINavigationTitleViewStyleSubTitleVertical;
-//    titleV.title = @"title";
-//    titleV.subtitle = @"subtitle";
-//    self.navigationItem.titleView = titleV;
+    QMUINavigationTitleView *titleV = [[QMUINavigationTitleView alloc]initWithStyle:QMUINavigationTitleViewStyleSubTitleVertical];
+    titleV.title = @"title";
+    titleV.subtitle = @"subtitle";
+    titleV.needsLoadingView = YES;
+    titleV.loadingViewHidden = false;
+    self.navigationItem.titleView = titleV;
     self.view.backgroundColor = UIColorWhite;
 }
 

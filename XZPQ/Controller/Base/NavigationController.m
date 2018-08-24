@@ -29,9 +29,9 @@
 
 /**
  
- **UInavigationController = 管理当前的UIViewController堆栈 + UINavigationBar管理 + UIToolbar + delegate**
+ ****UInavigationController = 管理当前的UIViewController堆栈 + UINavigationBar管理 + UIToolbar + delegate****
  
- 管理当前的UIViewController堆栈：
+ ***管理当前的UIViewController堆栈：
  
  * 参数一: UIViewController, 该参数不可以使用UITabBarController的实例
  * 参数二: 是否执行动画
@@ -55,7 +55,7 @@
  - (void)showViewController:(UIViewController *)vc sender:(id)sender; NS_AVAILABLE_IOS(8_0)
  
  
- UINavigationBar创建、配置及管理：
+ ***UINavigationBar创建、配置及管理：
  
  1.通过 viewControllers栈顶的navigationItem属性 (该属性位于UIViewController的UINavigationControllerItem类目中)
  管理 UINavigationBar展示的内容，
@@ -93,8 +93,39 @@
  navigationController.hidesBarsOnTap = YES;
  注: 该属性自iOS8开始生效
  
+ ***UINavigationBar堆栈管理UINavigationItem***
+ UINavigationBar = UINavigationItems; 系统默认：UINavigationBar = topItem（栈顶的UINavigationItem） + backItem（栈底的UINavigationItem）;
  
-  ToolBar创建、配置及管理
+ 管理UINavigationItem堆栈
+ 
+ 方式1
+ * 参数一: UINavigationItem
+ * 参数二: 是否执行动画
+- (void)pushNavigationItem:(UINavigationItem *)item animated:(BOOL)animated;
+eg：
+UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"Owen"];
+[navigationBar pushNavigationItem:navigationItem animated:YES];
+
+ * 参数一: 是否执行动画
+ * 返回值: 从UINavigationItem堆栈中Pop出来的UINavigationItem
+
+- (UINavigationItem *)popNavigationItemAnimated:(BOOL)animated;
+eg：
+//UINavigationItem *navigationItem = [navigationBar popNavigationItemAnimated:YES];
+
+ 方式2
+ @property(nonatomic, copy) NSArray<UINavigationItem *> *items;
+ eg：
+ navigationBar.items = @[navigationItem1, navigationItem2, navigationItem3];
+ 或者
+ * 参数一: UINavigationItem数组
+ * 参数二: 是否执行动画
+ 
+- (void)setItems:(NSArray<UINavigationItem *> *)items animated:(BOOL)animated;
+eg：
+[navigationBar setItems:@[navigationItem1, navigationItem2, navigationItem3] animated:YES];
+
+ ToolBar创建、配置及管理
  */
 
 @end

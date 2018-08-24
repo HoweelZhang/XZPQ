@@ -18,6 +18,8 @@
 		9E4B978F2123C2DD0076DAD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4B978D2123C2DD0076DAD5 /* LaunchScreen.storyboard */; };
 		9E4B97922123C2DD0076DAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B97912123C2DD0076DAD5 /* main.m */; };
 		9E8BCE1C212D31B6001DDB56 /* marsonyDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BCE1B212D31B6001DDB56 /* marsonyDemoViewController.m */; };
+		9E8BCE32212FB299001DDB56 /* JKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BCE31212FB299001DDB56 /* JKTabBarViewController.m */; };
+		9E8BCE3A212FB698001DDB56 /* JKTabBarViewControllerDEOM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BCE39212FB698001DDB56 /* JKTabBarViewControllerDEOM.m */; };
 		9ED3C26A21251D790039C8C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3C26921251D790039C8C4 /* Images.xcassets */; };
 		9ED3C27B212565F50039C8C4 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3C272212565F40039C8C4 /* homeViewController.m */; };
 		9ED3C27C212565F50039C8C4 /* mineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3C275212565F40039C8C4 /* mineViewController.m */; };
@@ -53,6 +55,10 @@
 		9E4B97912123C2DD0076DAD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9E8BCE1A212D31B6001DDB56 /* marsonyDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = marsonyDemoViewController.h; sourceTree = "<group>"; };
 		9E8BCE1B212D31B6001DDB56 /* marsonyDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = marsonyDemoViewController.m; sourceTree = "<group>"; };
+		9E8BCE30212FB299001DDB56 /* JKTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKTabBarViewController.h; sourceTree = "<group>"; };
+		9E8BCE31212FB299001DDB56 /* JKTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKTabBarViewController.m; sourceTree = "<group>"; };
+		9E8BCE38212FB698001DDB56 /* JKTabBarViewControllerDEOM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKTabBarViewControllerDEOM.h; sourceTree = "<group>"; };
+		9E8BCE39212FB698001DDB56 /* JKTabBarViewControllerDEOM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKTabBarViewControllerDEOM.m; sourceTree = "<group>"; };
 		9ED3C26921251D790039C8C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9ED3C272212565F40039C8C4 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		9ED3C273212565F40039C8C4 /* mineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mineViewController.h; sourceTree = "<group>"; };
@@ -91,6 +97,8 @@
 		9E17927F2126A2AA00EC2C69 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9E8BCE2F212FB27F001DDB56 /* UIKitControllers */,
+				9E004C62212411810032F7E8 /* Config */,
 				9E17929E212BB12800EC2C69 /* Categories */,
 				9E1792802126A2AA00EC2C69 /* Headers */,
 			);
@@ -149,17 +157,16 @@
 		9E1792A8212BFAF700EC2C69 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				9E8BCE0E212D0F06001DDB56 /* UITabbleView */,
-				9E1792AA212BFB1700EC2C69 /* UIView */,
+				9E8BCE0E212D0F06001DDB56 /* QMUIDEMO */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		9E1792AA212BFB1700EC2C69 /* UIView */ = {
+		9E1792AA212BFB1700EC2C69 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = UIView;
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		9E4B97762123C2DC0076DAD5 = {
@@ -184,11 +191,11 @@
 		9E4B97812123C2DC0076DAD5 /* XZPQ */ = {
 			isa = PBXGroup;
 			children = (
+				9E8BCE23212FB215001DDB56 /* src */,
 				9E1792A8212BFAF700EC2C69 /* UIKit */,
 				9E17927F2126A2AA00EC2C69 /* Common */,
 				9ED3C27F212566260039C8C4 /* View */,
 				9ED3C270212565F40039C8C4 /* Controller */,
-				9E004C62212411810032F7E8 /* Config */,
 				9E4B97822123C2DC0076DAD5 /* AppDelegate.h */,
 				9E4B97832123C2DC0076DAD5 /* AppDelegate.m */,
 				9E4B978D2123C2DD0076DAD5 /* LaunchScreen.storyboard */,
@@ -199,11 +206,12 @@
 			path = XZPQ;
 			sourceTree = "<group>";
 		};
-		9E8BCE0E212D0F06001DDB56 /* UITabbleView */ = {
+		9E8BCE0E212D0F06001DDB56 /* QMUIDEMO */ = {
 			isa = PBXGroup;
 			children = (
+				9E1792AA212BFB1700EC2C69 /* TableView */,
 			);
-			path = UITabbleView;
+			path = QMUIDEMO;
 			sourceTree = "<group>";
 		};
 		9E8BCE16212D14A7001DDB56 /* marsonyDemo */ = {
@@ -215,9 +223,123 @@
 			path = marsonyDemo;
 			sourceTree = "<group>";
 		};
+		9E8BCE23212FB215001DDB56 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9E8BCE24212FB215001DDB56 /* Framework */,
+				9E8BCE25212FB215001DDB56 /* Common */,
+				9E8BCE2E212FB215001DDB56 /* Modules */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		9E8BCE24212FB215001DDB56 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		9E8BCE25212FB215001DDB56 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9E8BCE26212FB215001DDB56 /* Configuration */,
+				9E8BCE27212FB215001DDB56 /* UIKit */,
+				9E8BCE2B212FB215001DDB56 /* Utils */,
+				9E8BCE2C212FB215001DDB56 /* NetService */,
+				9E8BCE2D212FB215001DDB56 /* Store */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9E8BCE26212FB215001DDB56 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		9E8BCE27212FB215001DDB56 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9E8BCE28212FB215001DDB56 /* NSObject */,
+				9E8BCE29212FB215001DDB56 /* Controllers */,
+				9E8BCE2A212FB215001DDB56 /* Views */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9E8BCE28212FB215001DDB56 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		9E8BCE29212FB215001DDB56 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9E8BCE2A212FB215001DDB56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E8BCE2B212FB215001DDB56 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9E8BCE2C212FB215001DDB56 /* NetService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetService;
+			sourceTree = "<group>";
+		};
+		9E8BCE2D212FB215001DDB56 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		9E8BCE2E212FB215001DDB56 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9E8BCE2F212FB27F001DDB56 /* UIKitControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E8BCE30212FB299001DDB56 /* JKTabBarViewController.h */,
+				9E8BCE31212FB299001DDB56 /* JKTabBarViewController.m */,
+			);
+			path = UIKitControllers;
+			sourceTree = "<group>";
+		};
+		9E8BCE33212FB482001DDB56 /* QMUI_TabbarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E8BCE38212FB698001DDB56 /* JKTabBarViewControllerDEOM.h */,
+				9E8BCE39212FB698001DDB56 /* JKTabBarViewControllerDEOM.m */,
+			);
+			path = QMUI_TabbarViewController;
+			sourceTree = "<group>";
+		};
 		9ED3C270212565F40039C8C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9E8BCE33212FB482001DDB56 /* QMUI_TabbarViewController */,
 				9E8BCE16212D14A7001DDB56 /* marsonyDemo */,
 				9E17928A212AA82000EC2C69 /* test */,
 				9ED3C271212565F40039C8C4 /* main */,
@@ -398,6 +520,7 @@
 				9E1792A7212BBE0300EC2C69 /* homeCollectionViewCell.m in Sources */,
 				9E4B97922123C2DD0076DAD5 /* main.m in Sources */,
 				9ED3C2862125677F0039C8C4 /* homeView.m in Sources */,
+				9E8BCE32212FB299001DDB56 /* JKTabBarViewController.m in Sources */,
 				9E004C65212411AC0032F7E8 /* QMUIConfigurationTemplate.m in Sources */,
 				9E17929C212BAC9A00EC2C69 /* CollectionViewCell.m in Sources */,
 				9E4B97842123C2DC0076DAD5 /* AppDelegate.m in Sources */,
@@ -406,6 +529,7 @@
 				9E1792A4212BB66200EC2C69 /* HomeCollectionView.m in Sources */,
 				9E1792A1212BB1D400EC2C69 /* UIView+frame.m in Sources */,
 				9ED3C27D212565F50039C8C4 /* NavigationController.m in Sources */,
+				9E8BCE3A212FB698001DDB56 /* JKTabBarViewControllerDEOM.m in Sources */,
 				9E17929D212BAC9A00EC2C69 /* CollectionViewController.m in Sources */,
 				9ED3C27B212565F50039C8C4 /* homeViewController.m in Sources */,
 				9E8BCE1C212D31B6001DDB56 /* marsonyDemoViewController.m in Sources */,
