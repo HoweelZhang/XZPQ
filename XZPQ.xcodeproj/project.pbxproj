@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3804D621E18571A71A69C0D9 /* libPods-XZPQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B3F3F7907640957F885E89 /* libPods-XZPQ.a */; };
 		9E004C65212411AC0032F7E8 /* QMUIConfigurationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E004C63212411AC0032F7E8 /* QMUIConfigurationTemplate.m */; };
+		9E01DDD72135306C00DACF8B /* demoTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E01DDD62135306C00DACF8B /* demoTableVC.m */; };
+		9E01DDDD21364DCB00DACF8B /* demoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E01DDDC21364DCB00DACF8B /* demoTableViewCell.m */; };
 		9E17929C212BAC9A00EC2C69 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E179298212BAC9A00EC2C69 /* CollectionViewCell.m */; };
 		9E17929D212BAC9A00EC2C69 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E17929B212BAC9A00EC2C69 /* CollectionViewController.m */; };
 		9E1792A1212BB1D400EC2C69 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1792A0212BB1D400EC2C69 /* UIView+frame.m */; };
@@ -19,7 +21,6 @@
 		9E4B97922123C2DD0076DAD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4B97912123C2DD0076DAD5 /* main.m */; };
 		9E8BCE1C212D31B6001DDB56 /* marsonyDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BCE1B212D31B6001DDB56 /* marsonyDemoViewController.m */; };
 		9E8BCE32212FB299001DDB56 /* JKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BCE31212FB299001DDB56 /* JKTabBarViewController.m */; };
-		9E8BCE3A212FB698001DDB56 /* JKTabBarViewControllerDEOM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BCE39212FB698001DDB56 /* JKTabBarViewControllerDEOM.m */; };
 		9ED3C26A21251D790039C8C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED3C26921251D790039C8C4 /* Images.xcassets */; };
 		9ED3C27B212565F50039C8C4 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3C272212565F40039C8C4 /* homeViewController.m */; };
 		9ED3C27C212565F50039C8C4 /* mineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3C275212565F40039C8C4 /* mineViewController.m */; };
@@ -33,6 +34,10 @@
 		8DC9BAC393B1C4379049E722 /* Pods-XZPQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZPQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-XZPQ/Pods-XZPQ.release.xcconfig"; sourceTree = "<group>"; };
 		9E004C63212411AC0032F7E8 /* QMUIConfigurationTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QMUIConfigurationTemplate.m; path = Pods/QMUIKit/QMUIConfigurationTemplate/QMUIConfigurationTemplate.m; sourceTree = SOURCE_ROOT; };
 		9E004C64212411AC0032F7E8 /* QMUIConfigurationTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QMUIConfigurationTemplate.h; path = Pods/QMUIKit/QMUIConfigurationTemplate/QMUIConfigurationTemplate.h; sourceTree = SOURCE_ROOT; };
+		9E01DDD52135306C00DACF8B /* demoTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = demoTableVC.h; sourceTree = "<group>"; };
+		9E01DDD62135306C00DACF8B /* demoTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demoTableVC.m; sourceTree = "<group>"; };
+		9E01DDDB21364DCB00DACF8B /* demoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = demoTableViewCell.h; sourceTree = "<group>"; };
+		9E01DDDC21364DCB00DACF8B /* demoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = demoTableViewCell.m; sourceTree = "<group>"; };
 		9E1792812126A2FE00EC2C69 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9E1792822126A2FE00EC2C69 /* Constants.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.pch; sourceTree = "<group>"; };
 		9E1792832126A2FE00EC2C69 /* HoweelMacros.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoweelMacros.pch; sourceTree = "<group>"; };
@@ -57,8 +62,6 @@
 		9E8BCE1B212D31B6001DDB56 /* marsonyDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = marsonyDemoViewController.m; sourceTree = "<group>"; };
 		9E8BCE30212FB299001DDB56 /* JKTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKTabBarViewController.h; sourceTree = "<group>"; };
 		9E8BCE31212FB299001DDB56 /* JKTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKTabBarViewController.m; sourceTree = "<group>"; };
-		9E8BCE38212FB698001DDB56 /* JKTabBarViewControllerDEOM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKTabBarViewControllerDEOM.h; sourceTree = "<group>"; };
-		9E8BCE39212FB698001DDB56 /* JKTabBarViewControllerDEOM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKTabBarViewControllerDEOM.m; sourceTree = "<group>"; };
 		9ED3C26921251D790039C8C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9ED3C272212565F40039C8C4 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		9ED3C273212565F40039C8C4 /* mineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mineViewController.h; sourceTree = "<group>"; };
@@ -330,8 +333,10 @@
 		9E8BCE33212FB482001DDB56 /* QMUI_TabbarViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9E8BCE38212FB698001DDB56 /* JKTabBarViewControllerDEOM.h */,
-				9E8BCE39212FB698001DDB56 /* JKTabBarViewControllerDEOM.m */,
+				9E01DDD52135306C00DACF8B /* demoTableVC.h */,
+				9E01DDD62135306C00DACF8B /* demoTableVC.m */,
+				9E01DDDB21364DCB00DACF8B /* demoTableViewCell.h */,
+				9E01DDDC21364DCB00DACF8B /* demoTableViewCell.m */,
 			);
 			path = QMUI_TabbarViewController;
 			sourceTree = "<group>";
@@ -527,11 +532,12 @@
 				9ED3C27C212565F50039C8C4 /* mineViewController.m in Sources */,
 				9ED3C27E212565F50039C8C4 /* TabBarViewController.m in Sources */,
 				9E1792A4212BB66200EC2C69 /* HomeCollectionView.m in Sources */,
+				9E01DDDD21364DCB00DACF8B /* demoTableViewCell.m in Sources */,
 				9E1792A1212BB1D400EC2C69 /* UIView+frame.m in Sources */,
 				9ED3C27D212565F50039C8C4 /* NavigationController.m in Sources */,
-				9E8BCE3A212FB698001DDB56 /* JKTabBarViewControllerDEOM.m in Sources */,
 				9E17929D212BAC9A00EC2C69 /* CollectionViewController.m in Sources */,
 				9ED3C27B212565F50039C8C4 /* homeViewController.m in Sources */,
+				9E01DDD72135306C00DACF8B /* demoTableVC.m in Sources */,
 				9E8BCE1C212D31B6001DDB56 /* marsonyDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,12 +19,5 @@
     // init 时做的事情请写在这里
 }
 
-#if DEBUG
--(NSString *)description{
-    NSString *surperDescription = [super description];
-    NSString *logString = [NSString stringWithFormat:surperDescription,@"中间层JKTabBarViewController"];
-    return logString;
-}
-#endif
 
 @end

@@ -63,10 +63,10 @@
     //1.创建Window
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-//    TabBarViewController *tabbar = [[TabBarViewController alloc]init];
-//    self.window.rootViewController = tabbar;
+    TabBarViewController *tabbar = [[TabBarViewController alloc]init];
+    self.window.rootViewController = tabbar;
     
-        self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[NSClassFromString(@"JKTabBarViewControllerDEMO") new]];
+//    self.window.rootViewControlleir = [[UINavigationController alloc]initWithRootViewController:[NSClassFromString(@"JKTabBarViewControllerDEMO") new]];
     [self.window makeKeyAndVisible];
 }
 
@@ -74,8 +74,6 @@
 - (void)initIntroduceViewController {
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSString *build = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey];
-    QMUILog(@"这个是标记", @"%@.%@", version,build);
-    QMUILogInfo(@"这个是标记", @"%@.%@", version,build);
-    QMUILogWarn(@"这个是标记", @"%@.%@", version,build);
+    QMUILog(@"appDelegate",@"version:%@,build:%@",version,build);
 }
 @end

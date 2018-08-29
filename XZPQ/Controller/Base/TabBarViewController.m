@@ -10,6 +10,7 @@
 #import "NavigationController.h"
 #import "homeViewController.h"
 #import "mineViewController.h"
+#import "demoTableVC.h"
 
 @interface TabBarViewController ()
 
@@ -25,13 +26,19 @@
 
 - (void)setupViewControllers {
     //b.创建子控制器
-    homeViewController *c1=[[homeViewController alloc]init];
-//    c1.tabBarItem.title=@"UIkit";
-    c1.tabBarItem.badgeValue=@"1";
-    c1.tabBarItem.image=[UIImage imageNamed:@"tabBar_essence_icon"];
-    c1.tabBarItem.selectedImage=[UIImage imageNamed:@"tabBar_essence_click_icon"];
-    c1.hidesBottomBarWhenPushed = NO;
-    NavigationController *c1Nva = [[NavigationController alloc]initWithRootViewController:c1];
+//    homeViewController *c1=[[homeViewController alloc]init];
+//    c1.tabBarItem.badgeValue=@"1";
+//    c1.tabBarItem.image=[UIImage imageNamed:@"tabBar_essence_icon"];
+//    c1.tabBarItem.selectedImage=[UIImage imageNamed:@"tabBar_essence_click_icon"];
+//    c1.hidesBottomBarWhenPushed = NO;
+//    NavigationController *c1Nva = [[NavigationController alloc]initWithRootViewController:c1];
+    
+    demoTableVC *demoVC = [[demoTableVC alloc] init];
+    demoVC.tabBarItem.badgeValue=@"1";
+    demoVC.tabBarItem.image=[UIImage imageNamed:@"tabBar_essence_icon"];
+    demoVC.tabBarItem.selectedImage=[UIImage imageNamed:@"tabBar_essence_click_icon"];
+    demoVC.hidesBottomBarWhenPushed = NO;
+    NavigationController *c1Nva = [[NavigationController alloc]initWithRootViewController:demoVC];
     
     
     QMUICommonViewController *c4=[[QMUICommonViewController alloc]init];
