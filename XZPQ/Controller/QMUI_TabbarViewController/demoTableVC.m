@@ -11,6 +11,8 @@
 
 @interface demoTableVC ()
 
+@property(nonatomic, strong) QMUIOrderedDictionary *dataSource;
+
 @end
 
 @implementation demoTableVC
@@ -23,6 +25,7 @@
 - (void)initTableView {
     [super initTableView];
     // 对 self.tableView 的操作写在这里
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
 }
 
 - (void)viewDidLoad {
@@ -57,14 +60,41 @@
 
 #pragma mark - <QMUITableViewDataSource, QMUITableViewDelegate>
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 5;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 1;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"普通 cell";
+    } else if (section == 1) {
+        return @"使用 imageEdgeInsets";
+    } else if (section == 2) {
+        return @"使用 textLabelEdgeInsets";
+    } else if (section == 3) {
+        return @"使用 detailTextLabelEdgeInsets";
+    } else if (section == 4) {
+        return @"使用 accessoryEdgeInsets";
+    }
+    return nil;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    demoTableViewCell *cell = [[demoTableViewCell alloc]init];
-    [tableView dequeueReusableCellWithIdentifier:@"123"];
+    demoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[demoTableViewCell alloc] initForTableView:tableView withReuseIdentifier:@"cell"];
+    }
+    
+    // reset
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+
+    [cell updateCellAppearanceWithIndexPath:indexPath];
     return cell;
 }
 

@@ -10,4 +10,6 @@
 
 @interface demoTableViewCell : QMUITableViewCell
 
+- (void)renderWithNameText:(NSString *)nameText contentText:(NSString *)contentText;
+
 @end
